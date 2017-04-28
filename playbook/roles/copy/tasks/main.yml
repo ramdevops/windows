@@ -1,0 +1,14 @@
+#windows yml file
+---
+- name: Take the Backup of existing Folder with Todays Datae
+  win_copy:
+    src: C:\ansible
+    dest: C:\ansible-{{ DATE }} 
+    remote_src: True
+    force: yes
+- name: Copy Folder to Remote Hosts
+  win_copy:
+    src: /root/fix
+    dest: C:\ansible
+    remote_src: False
+    force: yes

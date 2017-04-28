@@ -1,0 +1,6 @@
+#windows yml file
+---
+- name: Install datadog agent in windows
+  hosts: all
+  roles:
+    - copy
